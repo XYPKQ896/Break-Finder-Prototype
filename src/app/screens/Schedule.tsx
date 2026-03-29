@@ -97,6 +97,15 @@ export function Schedule() {
             <p>Longest gap: 2 hours (10:00 AM - 12:00 PM)</p>
           </div>
         </div>
+
+        {/* Tip Card */}
+        <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <h3 className="font-semibold text-gray-900 mb-3">💡 Tip</h3>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            For short gaps (under 15 minutes), we recommend finding nearby warm spots to relax. 
+            For longer gaps, you can explore places with food, study spaces, or comfortable seating.
+          </p>
+        </div>
       </div>
     </div>
   );

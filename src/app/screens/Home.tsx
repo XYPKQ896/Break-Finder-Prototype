@@ -52,7 +52,7 @@ export function Home() {
       {/* Header */}
       <div className="bg-white shadow-sm">
         <div className="max-w-md mx-auto px-6 py-6">
-          <h1 className="text-2xl font-bold text-gray-900">Winter Break Finder</h1>
+          <h1 className="text-2xl font-bold text-gray-900">Break Finder</h1>
           <div className="mt-3 space-y-1">
             {nextClass && (
               <p className="text-sm text-gray-600">

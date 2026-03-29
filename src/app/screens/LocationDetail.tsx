@@ -1,4 +1,4 @@
-import { ArrowLeft, MapPin, Clock, Flame, Coffee, Zap, Users, Armchair, BookOpen, Bookmark, Navigation } from 'lucide-react';
+import { ArrowLeft, MapPin, Clock, Flame, Coffee, Zap, Users, Armchair, BookOpen, Bookmark, ExternalLink } from 'lucide-react';
 import { useNavigate, useParams } from 'react-router';
 import { mockLocations } from '../data/locations';
 import { useSavedLocations } from '../hooks/useSavedLocations';
@@ -141,11 +141,15 @@ export function LocationDetail() {
         {/* Action Buttons */}
         <div className="space-y-3">
           <button
-            onClick={() => navigate(`/navigate/${location.id}`)}
+            onClick={() => {
+              // Open in Apple Maps (iOS) or Google Maps (Android/Web)
+              const query = encodeURIComponent(`${location.name} ${location.building}`);
+              window.open(`https://maps.apple.com/?q=${query}`, '_blank');
+            }}
             className="w-full bg-[#FF9966] text-white font-semibold py-4 rounded-xl hover:bg-[#FF8855] transition-colors shadow-lg flex items-center justify-center gap-2"
           >
-            <Navigation className="w-5 h-5" />
-            Navigate to Location
+            <ExternalLink className="w-5 h-5" />
+            Open in Maps
           </button>
           <button
             onClick={() => toggleSaved(location.id)}

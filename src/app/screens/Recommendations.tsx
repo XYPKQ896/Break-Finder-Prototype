@@ -96,13 +96,27 @@ export function Recommendations() {
           </div>
         ) : (
           <div className="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
-            <p className="text-gray-600 mb-4">No locations match your preferences</p>
-            <button
-              onClick={() => navigate('/preferences')}
-              className="text-[#FF9966] font-medium hover:underline"
-            >
-              Adjust your preferences
-            </button>
+            <p className="text-gray-600 mb-4">
+              {searchQuery.trim() 
+                ? 'No locations found matching your search' 
+                : 'No locations match your preferences'}
+            </p>
+            {!searchQuery.trim() && (
+              <button
+                onClick={() => navigate('/preferences')}
+                className="text-[#FF9966] font-medium hover:underline"
+              >
+                Adjust your preferences
+              </button>
+            )}
+            {searchQuery.trim() && (
+              <button
+                onClick={() => setSearchQuery('')}
+                className="text-[#FF9966] font-medium hover:underline"
+              >
+                Clear search
+              </button>
+            )}
           </div>
         )}
       </div>
