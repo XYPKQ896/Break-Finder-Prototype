@@ -6,7 +6,6 @@ import { Schedule } from './screens/Schedule';
 import { Recommendations } from './screens/Recommendations';
 import { LocationDetail } from './screens/LocationDetail';
 import { NavigationScreen } from './screens/NavigationScreen';
-import { MapView } from './screens/MapView';
 import { SavedLocations } from './screens/SavedLocations';
 import { Profile } from './screens/Profile';
 
@@ -21,7 +20,6 @@ export const router = createBrowserRouter([
       { path: 'recommendations', Component: Recommendations },
       { path: 'location/:id', Component: LocationDetail },
       { path: 'navigate/:id', Component: NavigationScreen },
-      { path: 'map', Component: MapView },
       { path: 'saved', Component: SavedLocations },
       { path: 'profile', Component: Profile },
     ],

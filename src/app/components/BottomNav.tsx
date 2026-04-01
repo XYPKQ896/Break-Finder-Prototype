@@ -1,4 +1,4 @@
-import { Home, Map, Bookmark, User } from 'lucide-react';
+import { Home, Bookmark, User } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 
 export function BottomNav() {
@@ -6,7 +6,6 @@ export function BottomNav() {
   
   const navItems = [
     { path: '/', icon: Home, label: 'Home' },
-    { path: '/map', icon: Map, label: 'Map' },
     { path: '/saved', icon: Bookmark, label: 'Saved' },
     { path: '/profile', icon: User, label: 'Profile' },
   ];
